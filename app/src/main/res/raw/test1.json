@@ -2,8 +2,17 @@
   "id": "ROW",
   "children": [
     {
-      "id": "TEXT",
-      "text": "Test1"
+      "id": "COLUMN",
+      "children": [
+       {
+        "id": "TEXT",
+        "text": "Test1"
+       },
+       {
+        "id": "TEXT",
+        "text": "Test2"
+        },
+      ]
     },
     {
       "id": "IMAGE",
@@ -14,7 +23,7 @@
     },
     {
       "id": "TEXT",
-      "text": "Test2"
+      "text": "Test3"
     }
   ]
 }

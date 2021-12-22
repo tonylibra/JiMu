@@ -4,13 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.material.Text
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
+import com.application.jimu.R
+import com.application.jimu.core.component.JiMuTree
 import com.application.jimu.databinding.FragmentComposeBinding
 import com.application.jimu.ui.theme.JimuTheme
 
@@ -35,13 +32,12 @@ class HomeFragment : Fragment() {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 JimuTheme {
-                    Row(
-                        modifier = Modifier.fillMaxHeight(),
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Text(text = "Hello")
-                        Text(text = "HomeFragment")
-                    }
+                    JiMuTree.content(
+                        context = context,
+                        response = context
+                            .resources.openRawResource(R.raw.test1).bufferedReader()
+                            .use { it.readText() },
+                    )
                 }
             }
         }

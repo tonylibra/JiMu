@@ -53,6 +53,9 @@ dependencies {
     //GSON
     implementation(Libs.GSON.GSON)
 
+    //Kotlin reflect
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+
     //TODO Clean up
     testImplementation("junit:junit:4.+")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
