@@ -1,17 +1,17 @@
 plugins {
-    id ("com.android.application")
+    id("com.android.application")
     kotlin("android")
 }
 
 android {
-    compileSdk = 31
+    compileSdk = Versions.COMPILE_SDK_VERSION
 
     defaultConfig {
         applicationId = "com.application.jimu"
-        minSdk = 21
-        targetSdk = 31
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = Versions.MIN_SDK_VERSION
+        targetSdk = Versions.TARGET_SDK_VERSION
+        versionCode = Versions.VERSION_CODE
+        versionName = Versions.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -20,7 +20,7 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"), 
+                getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
@@ -28,6 +28,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        compose = true
     }
 
     compileOptions {
@@ -36,6 +37,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.COMPOSE_VERSION
     }
 }
 
@@ -51,6 +55,15 @@ dependencies {
     implementation(Libs.Android.Navigation.UI)
     implementation(Libs.Android.Lifecycle.LIVE_DATA)
     implementation(Libs.Android.Lifecycle.VIEW_MODEL)
+    implementation(Libs.Android.COMPOSE.ACTIVITY)
+    implementation(Libs.Android.COMPOSE.MATERIAL)
+    implementation(Libs.Android.COMPOSE.MATERIAL_THEME)
+    implementation(Libs.Android.COMPOSE.ANIMATION)
+    implementation(Libs.Android.COMPOSE.UI_TOOL)
+    implementation(Libs.Android.COMPOSE.VIEW_MODEL)
+
+    //GSON
+    implementation(Libs.GSON.GSON)
 
     //TODO Clean up
     testImplementation("junit:junit:4.+")
