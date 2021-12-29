@@ -1,0 +1,20 @@
+{
+  "id": "ROW",
+  "children": [
+    {
+      "id": "TEXT",
+      "text": "Test1"
+    },
+    {
+      "id": "IMAGE",
+      "image": {
+        "source": "LOCAL",
+        "resource": ""
+      }
+    },
+    {
+      "id": "TEXT",
+      "text": "Test2"
+    }
+  ]
+}
