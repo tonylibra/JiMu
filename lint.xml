@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+
+    <!-- Ignore the ObsoleteLayoutParam issue in the specified files -->
+    <issue id="ObsoleteLayoutParam">
+        <ignore path="res/layout/activation.xml" />
+        <ignore path="res/layout-xlarge/activation.xml" />
+    </issue>
+
+
+    <!-- Change the severity of hardcoded strings to "error" -->
+    <issue id="HardcodedText" severity="warning" />
+</lint>
