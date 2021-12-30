@@ -9,10 +9,10 @@
         android:id="@+id/homeFragment"
         android:name="com.application.jimu.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_compose" />
     <keep_state_fragment
         android:id="@+id/accountFragment"
         android:name="com.application.jimu.ui.account.AccountFragment"
         android:label="fragment_account"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_compose" />
 </navigation>

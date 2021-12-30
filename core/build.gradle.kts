@@ -1,17 +1,15 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    id("com.android.library")
+    id("kotlin-android")
 }
 
 android {
     compileSdk = Versions.COMPILE_SDK_VERSION
 
+
     defaultConfig {
-        applicationId = "com.application.jimu"
         minSdk = Versions.MIN_SDK_VERSION
         targetSdk = Versions.TARGET_SDK_VERSION
-        versionCode = Versions.VERSION_CODE
-        versionName = Versions.VERSION_NAME
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -25,7 +23,6 @@ android {
             )
         }
     }
-
     buildFeatures {
         viewBinding = true
         compose = true
@@ -44,17 +41,8 @@ android {
 }
 
 dependencies {
+
     //ANDROID
-    implementation(Libs.Android.MATERIAL)
-    implementation(Libs.Android.ACTIVITY)
-    implementation(Libs.Android.APP_COMPAT)
-    implementation(Libs.Android.CONSTRAINT_LAYOUT)
-    implementation(Libs.Android.CORE_KTX)
-    implementation(Libs.Android.FRAGMENT)
-    implementation(Libs.Android.Navigation.FRAGMENT)
-    implementation(Libs.Android.Navigation.UI)
-    implementation(Libs.Android.Lifecycle.LIVE_DATA)
-    implementation(Libs.Android.Lifecycle.VIEW_MODEL)
     implementation(Libs.Android.COMPOSE.ACTIVITY)
     implementation(Libs.Android.COMPOSE.MATERIAL)
     implementation(Libs.Android.COMPOSE.MATERIAL_THEME)
@@ -64,8 +52,6 @@ dependencies {
 
     //GSON
     implementation(Libs.MOSHI.MOSHI)
-    // core
-    implementation(project(":core"))
 
     //TODO Clean up
     testImplementation("junit:junit:4.+")
