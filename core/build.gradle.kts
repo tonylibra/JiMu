@@ -51,7 +51,7 @@ dependencies {
     implementation(Libs.Android.COMPOSE.VIEW_MODEL)
 
     //GSON
-    implementation(Libs.GSON.GSON)
+    implementation(Libs.MOSHI.MOSHI)
 
     //TODO Clean up
     testImplementation("junit:junit:4.+")

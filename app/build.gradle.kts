@@ -63,7 +63,7 @@ dependencies {
     implementation(Libs.Android.COMPOSE.VIEW_MODEL)
 
     //GSON
-    implementation(Libs.GSON.GSON)
+    implementation(Libs.MOSHI.MOSHI)
     // core
     implementation(project(":core"))
 

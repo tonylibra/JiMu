@@ -30,7 +30,7 @@ object Libs {
         }
     }
 
-    object GSON {
-        const val GSON = "com.google.code.gson:gson:2.8.9"
+    object MOSHI {
+        const val MOSHI = "com.squareup.moshi:moshi:1.13.0"
     }
 }
